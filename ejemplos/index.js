@@ -100,3 +100,6 @@ const crearNombreCompleto = (nombre, apellido) => {
 };
 
 crearNombreCompleto(nombre, apellido);
+
+const botones = document.getElementsByTagName("button");
+console.log(botones);
