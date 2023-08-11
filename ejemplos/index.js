@@ -33,7 +33,7 @@ console.log("Triple igual: " + "45" === 45);
 
 console.log("---- Concatenación ----");
 console.log(nombre + " " + apellido);
-console.log(`${first} ${apellido}`);
+console.log(`${nombre} ${apellido}`);
 
 console.log("---- Operador Ternario ---- (exp ? verdadero : falso)");
 console.log(edad > 18 ? "Tiene premio" : "Pa tu casa a ver pocoyo");
@@ -84,7 +84,19 @@ function imprimirNombre(nombre) {
 }
 
 const imprmirNombreYApellido = (nombre, apellido) => {
-  console.log(`${first} ${apellido}`);
+  console.log(`${nombre} ${apellido}`);
 };
 
 imprimirNombreYApellido(nombre, apellido);
+
+const crearNombreCompleto = (nombre, apellido) => {
+  console.log("--- GLOBAL SCOPE FAKE ---");
+  console.log(nombre, apellido);
+  let name = nombre;
+  if (nombre.length > 3) {
+    let name = nombre + " " + apellido;
+    console.log(name);
+  }
+};
+
+crearNombreCompleto(nombre, apellido);
