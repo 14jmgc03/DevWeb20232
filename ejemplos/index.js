@@ -103,3 +103,46 @@ crearNombreCompleto(nombre, apellido);
 
 const botones = document.getElementsByTagName("button");
 console.log(botones);
+
+// ARRAY
+const estudiantes = [];
+
+// Agregar un elemento
+// estudiantes.push(5);
+// estudiantes.push(null);
+// estudiantes.push({});
+// estudiantes.push(() => {
+//   console.log();
+// });
+
+estudiantes.push({ Nombre: "Juan", id: 123 });
+estudiantes.push({ Nombre: "Maria", id: 1234 });
+estudiantes.push({ Nombre: "Maria", id: 12345 });
+
+const imprimirEstudiante = (estudiantes) => {
+  console.log(estudiantes);
+};
+
+estudiantes.forEach((x) => {
+  console.log(x.Nombre);
+});
+
+for (let i = 0; i < estudiantes.length; index++) {
+  if (estudiantes[i].Nombre == "Maria") {
+    console.log(estudiantes[i].id);
+  }
+}
+
+// Todos "Maria"
+const marias = estudiantes.filter((x) => x.Nombre == "Maria");
+console.log(marias);
+
+// La primer "Maria" que encuentre
+const marias2 = estudiantes.find((x) => x.Nombre == "Maria");
+marias2[0].id;
+
+estudiantes = estudiantes.map((x) => {
+  return { ...x, edad: null };
+});
+
+console.log(estudiantes);
